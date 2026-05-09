@@ -1,4 +1,3 @@
-import React from 'react';
 import { Terminal, Ghost, Command } from 'lucide-react';
 import { CONTENT } from './constants/content';
 

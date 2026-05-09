@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, User, Hand, Mail, Command } from 'lucide-react';
+import { Terminal, Hand, Mail, Command, Ghost } from 'lucide-react';
 import { CONTENT } from './constants/content';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-muted border rounded-md border-border flex items-center justify-center">
-                    <User size={24} className="text-muted-foreground" />
+                    <Ghost size={24} className="text-muted-foreground" />
                   </div>
                   <div>
                     <h1 className="text-xl font-bold text-foreground tracking-tight">

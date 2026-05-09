@@ -11,9 +11,9 @@ export const CONTENT = {
     { label: "Let's keep it formal", href: "mailto:heyshrav@gmail.com", icon: Mail },
   ],
   SYSTEM: {
-    WINDOW_TITLE: "Hey there!",
+    WINDOW_TITLE: "Well, Hello there!",
     FOOTER_LEFT: "Work In Progress..",
-    FOOTER_RIGHT: "v1.0.0-alpha",
+    FOOTER_RIGHT: "Don't forget to drink water!",
     PROMPT: "~$",
   }
 };

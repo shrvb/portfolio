@@ -36,10 +36,10 @@ function App() {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-muted border rounded-md border-border flex items-center justify-center">
-                    <Ghost size={24} className="text-muted-foreground" />
+                    <Ghost size={24} className="animate-pulse text-muted-foreground" />
                 </div>
                 <div>
-                  <h1 className="text-h1">
+                  <h1 className="text-h1 dark:text-white">
                     {CONTENT.PROFILE.NAME}
                   </h1>
                   <p className="text-sh1">
@@ -50,11 +50,11 @@ function App() {
               
               <div className="p-4 bg-accent border border-border rounded text-xs text-accent-foreground flex items-center gap-3">
                 <Terminal size={14} />
-                <span className="text-body2">
+                <span className="text-body3">
                    <EncryptedText
                     text={CONTENT.PROFILE.WIP_MESSAGE}
                     encryptedClassName="text-neutral-500"
-                    revealedClassName="dark:text-white text-black"
+                    revealedClassName="dark:text-white text-neutral-800"
                     revealDelayMs={30}
                   />
                   </span>
@@ -77,8 +77,15 @@ function App() {
             </div>
 
             <div className={`pt-8 flex items-center gap-2 text-[10px] border-t border-border text-muted-foreground`}>
-              <span className="text-prompt">{CONTENT.SYSTEM.PROMPT}</span>
-              <span className="animate-pulse">_</span>
+              <span className="text-prompt">
+                <EncryptedText
+                    text={CONTENT.SYSTEM.PROMPT}
+                    encryptedClassName="text-neutral-500"
+                    revealedClassName="dark:text-white text-black"
+                    revealDelayMs={50}
+                  />
+              </span>
+              <span className="animate-bounce">_</span>
             </div>
           </div>
         </div>

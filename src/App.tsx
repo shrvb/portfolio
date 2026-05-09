@@ -26,19 +26,19 @@ function App() {
         <div className="p-6 md:p-10 min-h-[300px]">
           <div className="animate-in fade-in duration-700 space-y-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-slate-800 border border-slate-700 flex items-center justify-center">
-                  <User size={24} className="text-slate-400" />
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-muted border rounded-md border-border flex items-center justify-center">
+                    <User size={24} className="text-muted-foreground" />
+                  </div>
+                  <div>
+                    <h1 className="text-xl font-bold text-foreground tracking-tight">
+                      {CONTENT.PROFILE.NAME}
+                    </h1>
+                    <p className="text-xs text-muted-foreground uppercase tracking-tighter">
+                      {CONTENT.PROFILE.SUBTITLE}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h1 className="text-xl font-bold text-foreground tracking-tight">
-                    {CONTENT.PROFILE.NAME}
-                  </h1>
-                  <p className="text-xs text-muted-foreground uppercase tracking-tighter">
-                    {CONTENT.PROFILE.SUBTITLE}
-                  </p>
-                </div>
-              </div>
               
               <div className="p-4 bg-accent border border-border rounded text-xs text-accent-foreground flex items-center gap-3">
                 <Terminal size={14} />

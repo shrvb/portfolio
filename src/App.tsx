@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="min-h-screen bg-background text-muted-foreground p-4 md:p-8 font-mono flex items-center justify-center">
       {/* Minimal TUI Window */}
-      <CardContainer className="w-2xl max-w-2xl">
+      <CardContainer className="md:w-2xl max-w-2xl sm:w-full">
       <div className="w-full max-w-2xl border border-border bg-card shadow-2xl rounded-lg overflow-hidden flex flex-col">
         
         {/* Window Header */}

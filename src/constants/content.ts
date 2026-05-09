@@ -1,3 +1,5 @@
+import { Hand, Mail } from 'lucide-react';
+
 export const CONTENT = {
   PROFILE: {
     NAME: "Shravan",
@@ -5,8 +7,8 @@ export const CONTENT = {
     WIP_MESSAGE: "This portfolio is currently a work in progress.",
   },
   SOCIALS: [
-    { label: "Say Hi on LinkedIn!", href: "https://linkedin.com/in/heyshrav", icon: 'Hand' },
-    { label: "Let's keep it formal", href: "mailto:heyshrav@gmail.com", icon: 'Mail' },
+    { label: "Say Hi on LinkedIn!", href: "https://linkedin.com/in/heyshrav", icon: Hand },
+    { label: "Let's keep it formal", href: "mailto:heyshrav@gmail.com", icon: Mail },
   ],
   SYSTEM: {
     WINDOW_TITLE: "Hey there!",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Ghost, Hand, Mail, Command } from 'lucide-react';
+import { Terminal, Ghost, Command } from 'lucide-react';
 import { CONTENT } from './constants/content';
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
 
             <div className="flex gap-6 pt-4">
               {CONTENT.SOCIALS.map((social) => {
-                const Icon = social.label === "Let's keep it formal" ? Mail : Hand;
+                const Icon = social.icon;
                 return (
                   <a 
                     key={social.label} 

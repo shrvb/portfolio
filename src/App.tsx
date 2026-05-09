@@ -1,10 +1,13 @@
 import { Terminal, Ghost, Command } from 'lucide-react';
 import { CONTENT } from './constants/content';
+import { CardContainer } from './components/ui/3d-card';
+import { EncryptedText } from './components/ui/encrypted-text';
 
 function App() {
   return (
     <div className="min-h-screen bg-background text-muted-foreground p-4 md:p-8 font-mono flex items-center justify-center">
       {/* Minimal TUI Window */}
+      <CardContainer className="w-2xl max-w-2xl">
       <div className="w-full max-w-2xl border border-border bg-card shadow-2xl rounded-lg overflow-hidden flex flex-col">
         
         {/* Window Header */}
@@ -14,9 +17,15 @@ function App() {
               <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
               <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
               <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
-            </div>
+            </div>   
             <span className={`flex items-center gap-2 text-caption`}>
-              <Command size={10} /> {CONTENT.SYSTEM.WINDOW_TITLE}
+              <Command size={10} /> 
+               <EncryptedText
+                    text={CONTENT.SYSTEM.WINDOW_TITLE}
+                    encryptedClassName="text-neutral-500"
+                    revealedClassName="dark:text-white text-black"
+                    revealDelayMs={50}
+                  />
             </span>
           </div>
         </div>
@@ -41,7 +50,14 @@ function App() {
               
               <div className="p-4 bg-accent border border-border rounded text-xs text-accent-foreground flex items-center gap-3">
                 <Terminal size={14} />
-                <span className="text-body2">{CONTENT.PROFILE.WIP_MESSAGE}</span>
+                <span className="text-body2">
+                   <EncryptedText
+                    text={CONTENT.PROFILE.WIP_MESSAGE}
+                    encryptedClassName="text-neutral-500"
+                    revealedClassName="dark:text-white text-black"
+                    revealDelayMs={30}
+                  />
+                  </span>
               </div>
             </div>
 
@@ -75,6 +91,8 @@ function App() {
           <div>{CONTENT.SYSTEM.FOOTER_RIGHT}</div>
         </div>
       </div>
+        </CardContainer>
+     
     </div>
   );
 }

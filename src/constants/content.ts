@@ -2,6 +2,7 @@ import { Hand, Mail } from 'lucide-react';
 
 export const CONTENT = {
   PROFILE: {
+    IMAGE: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
     NAME: "Shravan",
     SUBTITLE: "Product Designer who writes code for fun.",
     WIP_MESSAGE: "This portfolio is currently a work in progress.",

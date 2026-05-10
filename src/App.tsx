@@ -2,14 +2,18 @@ import { Terminal, Ghost, Command } from 'lucide-react';
 import { CONTENT } from './constants/content';
 import { CardContainer } from './components/ui/3d-card';
 import { EncryptedText } from './components/ui/encrypted-text';
+import { Cursor, CursorFollow, CursorProvider } from './components/animate-ui/components/animate/cursor';
 
 function App() {
   return (
     <div className="min-h-screen bg-background text-muted-foreground p-4 md:p-8 font-mono flex items-center justify-center">
       {/* Minimal TUI Window */}
+<CursorProvider>
+  <Cursor />
+  <CursorFollow>You</CursorFollow>
+      
       <CardContainer className="md:w-2xl max-w-2xl sm:w-full">
       <div className="w-full max-w-2xl border border-border bg-card shadow-2xl rounded-lg overflow-hidden flex flex-col">
-        
         {/* Window Header */}
         <div className="bg-muted px-4 py-2 flex items-center justify-between border-b border-border">
           <div className="flex items-center gap-3">
@@ -35,9 +39,7 @@ function App() {
           <div className="animate-in fade-in duration-700 space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-muted border rounded-md border-border flex items-center justify-center">
-                    <Ghost size={24} className="animate-pulse text-muted-foreground" />
-                </div>
+                   <img className="w-12 h-12 bg-muted border rounded-md border-border flex items-center justify-center" src={CONTENT.PROFILE.IMAGE} alt="img" />
                 <div>
                   <h1 className="text-h1 dark:text-white">
                     {CONTENT.PROFILE.NAME}
@@ -99,7 +101,7 @@ function App() {
         </div>
       </div>
         </CardContainer>
-     
+</CursorProvider>
     </div>
   );
 }
